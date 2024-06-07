@@ -10,6 +10,11 @@ This repository contains a Python project that leverages the LangChain framework
 - **Image Processing**: Processes medical report images to extract and format data into a predefined schema.
 - **Safety Settings**: Configures safety settings to filter out harmful content.
 
+ ## Usage
+Define the Pydantic models for the CBC report.
+Create and configure the LangChain pipeline to process input images and extract data.
+Invoke the chain with an image URL to get the structured JSON output.
+
 ## Getting Started
 
 ### Installation
@@ -18,6 +23,16 @@ This repository contains a Python project that leverages the LangChain framework
 pip install langchain
 pip install langchain-google-genai
 pip install pydantic
+
+## Setup
+##Configure the API key for accessing the Gemini 1.5 Pro model.
+
+
+import os
+from google.colab import userdata
+api_key = userdata.get('GOOGLE_API_KEY')
+os.environ["GOOGLE_API_KEY"] = api_key
+
 
 
 
